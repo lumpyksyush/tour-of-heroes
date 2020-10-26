@@ -1,6 +1,13 @@
 <div class="heroes__container">
   <h2>All Heroes</h2>
   <ul class="heroes__container_catalogue">
+    <div>
+      <label
+        >Hero name:
+        <input #heroName />
+      </label>
+      <button (click)="add(heroName.value); heroName.value = ''">add</button>
+    </div>
     <li
       *ngFor="let hero of heroes"
       [class.selected]="hero === selectedHero"
@@ -12,6 +19,9 @@
         }}</span>
         {{ hero.name }}</a
       >
+      <button class="delete" title="delete hero" (click)="delete(hero)">
+        x
+      </button>
     </li>
   </ul>
 </div>

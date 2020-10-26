@@ -1,3 +1,11 @@
+button.delete {
+  position: relative;
+  left: 194px;
+  top: -32px;
+  background-color: gray !important;
+  color: white;
+}
+
 .heroes__container {
   &_catalogue {
     margin: 0 0 2em 0;
